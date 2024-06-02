@@ -1,0 +1,55 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    text-align: center;
+    padding: 20px;
+    max-height: 100vh; /* Ensure dashboard takes up full viewport height */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.dashboard-title {
+    margin-bottom: 20px;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Space between charts */
+    justify-items: center; /* Center charts horizontally */
+}
+
+.chart-container {
+    background-color: #2e2e2e; /* Darker background for chart container */
+    border: 1px solid #444; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the container */
+    width: 100%; /* Ensure container takes full width of its grid cell */
+    max-width: 500px; /* Optional: Limit max width */
+    height: 350px; /* Adjust height to fit more charts on one page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chart {
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard::-webkit-scrollbar {
+    display: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .charts-container {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+}
+
